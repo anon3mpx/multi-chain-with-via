@@ -1,0 +1,30 @@
+{
+  "name": "multi-chain-with-via",
+  "version": "1.0.0",
+  "description": "Cross-chain token bridge with VIA Labs",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test"
+  },
+  "keywords": [
+    "blockchain",
+    "hardhat",
+    "cross-chain",
+    "via-labs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.3",
+    "@openzeppelin/contracts-upgradeable": "^4.9.3",
+    "@vialabs-io/contracts": "github:VIALabs-io/contracts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/hardhat-upgrades": "^3.2.0",
+    "chai": "^4.3.10",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.13.1",
+    "hardhat": "^2.22.6"
+  }
+}
