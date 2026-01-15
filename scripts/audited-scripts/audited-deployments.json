@@ -1,0 +1,16 @@
+{
+  "HOA": {
+    "pulsechain": {
+      "address": "0x3Aef79E7455843A33E4c46D5Cf283A809BF50970",
+      "type": "collateral",
+      "deployedAt": "2026-01-13T14:57:07.514Z",
+      "chainId": 369
+    },
+    "base": {
+      "address": "0xae72a52f4A6B36d65cC971dF9FdEFfa07ab5Db5E",
+      "type": "synthetic",
+      "deployedAt": "2026-01-13T14:57:59.946Z",
+      "chainId": 8453
+    }
+  }
+}

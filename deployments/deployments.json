@@ -1,0 +1,1426 @@
+{
+  "943": {
+    "address": "0x91E34254655381F873bC50EA1e7Ac9fD4594FAD8",
+    "contractName": "ViaERC20Collateral",
+    "abi": [
+      {
+        "type": "constructor",
+        "stateMutability": "undefined",
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "_wrappedToken"
+          },
+          {
+            "type": "address",
+            "name": "_messageV3Address"
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "MessageOwnershipTransferred",
+        "inputs": [
+          {
+            "type": "address",
+            "name": "previousOwner",
+            "indexed": false
+          },
+          {
+            "type": "address",
+            "name": "newOwner",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "RecoverToken",
+        "inputs": [
+          {
+            "type": "address",
+            "name": "owner",
+            "indexed": false
+          },
+          {
+            "type": "address",
+            "name": "token",
+            "indexed": false
+          },
+          {
+            "type": "uint256",
+            "name": "amount",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "SendMessageWithFeature",
+        "inputs": [
+          {
+            "type": "uint256",
+            "name": "txId",
+            "indexed": false
+          },
+          {
+            "type": "uint256",
+            "name": "destinationChainId",
+            "indexed": false
+          },
+          {
+            "type": "uint32",
+            "name": "featureId",
+            "indexed": false
+          },
+          {
+            "type": "bytes",
+            "name": "featureData",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "SetExsig",
+        "inputs": [
+          {
+            "type": "address",
+            "name": "owner",
+            "indexed": false
+          },
+          {
+            "type": "address",
+            "name": "exsig",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "SetMaxfee",
+        "inputs": [
+          {
+            "type": "address",
+            "name": "owner",
+            "indexed": false
+          },
+          {
+            "type": "uint256",
+            "name": "maxfee",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "SetMaxgas",
+        "inputs": [
+          {
+            "type": "address",
+            "name": "owner",
+            "indexed": false
+          },
+          {
+            "type": "uint256",
+            "name": "maxGas",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "TokensBridged",
+        "inputs": [
+          {
+            "type": "address",
+            "name": "sender",
+            "indexed": true
+          },
+          {
+            "type": "uint32",
+            "name": "destChainId",
+            "indexed": true
+          },
+          {
+            "type": "address",
+            "name": "recipient",
+            "indexed": true
+          },
+          {
+            "type": "uint256",
+            "name": "amount",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "TokensReceived",
+        "inputs": [
+          {
+            "type": "uint256",
+            "name": "sourceChainId",
+            "indexed": true
+          },
+          {
+            "type": "address",
+            "name": "recipient",
+            "indexed": true
+          },
+          {
+            "type": "uint256",
+            "name": "amount",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "fallback",
+        "stateMutability": "payable"
+      },
+      {
+        "type": "function",
+        "name": "CHAINS",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [
+          {
+            "type": "uint256",
+            "name": ""
+          }
+        ],
+        "outputs": [
+          {
+            "type": "address",
+            "name": "endpoint"
+          },
+          {
+            "type": "bytes",
+            "name": "endpointExtended"
+          },
+          {
+            "type": "uint16",
+            "name": "confirmations"
+          },
+          {
+            "type": "bool",
+            "name": "extended"
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "FEATURES",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [
+          {
+            "type": "uint256",
+            "name": ""
+          },
+          {
+            "type": "uint32",
+            "name": ""
+          }
+        ],
+        "outputs": [
+          {
+            "type": "address",
+            "name": "endpoint"
+          },
+          {
+            "type": "bytes",
+            "name": "endpointExtended"
+          },
+          {
+            "type": "uint16",
+            "name": "confirmations"
+          },
+          {
+            "type": "bool",
+            "name": "extended"
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "FEATURE_GATEWAY",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+          {
+            "type": "address",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "FEE_TOKEN",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+          {
+            "type": "address",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "MESSAGE_OWNER",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+          {
+            "type": "address",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "MESSAGEv3",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+          {
+            "type": "address",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "bridge",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "uint32",
+            "name": "_destChainId"
+          },
+          {
+            "type": "address",
+            "name": "_recipient"
+          },
+          {
+            "type": "uint256",
+            "name": "_amount"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "configureClient",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "_messageV3"
+          },
+          {
+            "type": "uint256[]",
+            "name": "_chains"
+          },
+          {
+            "type": "address[]",
+            "name": "_endpoints"
+          },
+          {
+            "type": "uint16[]",
+            "name": "_confirmations"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "configureClientExtended",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "_messageV3"
+          },
+          {
+            "type": "uint256[]",
+            "name": "_chains"
+          },
+          {
+            "type": "bytes[]",
+            "name": "_endpoints"
+          },
+          {
+            "type": "uint16[]",
+            "name": "_confirmations"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "configureFeatureGateway",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "_featureGateway"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "isAuthorized",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "_sender"
+          },
+          {
+            "type": "uint256",
+            "name": "_sourceChainId"
+          }
+        ],
+        "outputs": [
+          {
+            "type": "bool",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "isSelf",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "_sender"
+          },
+          {
+            "type": "uint256",
+            "name": "_sourceChainId"
+          }
+        ],
+        "outputs": [
+          {
+            "type": "bool",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "messageProcess",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "uint256",
+            "name": "_txId"
+          },
+          {
+            "type": "uint256",
+            "name": "_sourceChainId"
+          },
+          {
+            "type": "address",
+            "name": "_sender"
+          },
+          {
+            "type": "address",
+            "name": "_reference"
+          },
+          {
+            "type": "uint256",
+            "name": "_protocolAmount"
+          },
+          {
+            "type": "bytes",
+            "name": "_data"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "recoverToken",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "_token"
+          },
+          {
+            "type": "uint256",
+            "name": "_amount"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "setExsig",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "_signer"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "setMaxfee",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "uint256",
+            "name": "_maxFee"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "setMaxgas",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "uint256",
+            "name": "_maxGas"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "totalLocked",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+          {
+            "type": "uint256",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "transferMessageOwnership",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "_newMessageOwner"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "wrappedToken",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+          {
+            "type": "address",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "receive",
+        "stateMutability": "payable"
+      }
+    ],
+    "chainId": 943,
+    "networkName": "pulsechain_testnet"
+  },
+  "84532": {
+    "address": "0x19BBE0f501251aC16Fcc72cc9AF8678Fc6AAC594",
+    "contractName": "ViaERC20",
+    "abi": [
+      {
+        "type": "constructor",
+        "stateMutability": "undefined",
+        "payable": false,
+        "inputs": [
+          {
+            "type": "string",
+            "name": "_name"
+          },
+          {
+            "type": "string",
+            "name": "_symbol"
+          },
+          {
+            "type": "uint256",
+            "name": "_initialSupply"
+          },
+          {
+            "type": "address",
+            "name": "_messageV3Address"
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "Approval",
+        "inputs": [
+          {
+            "type": "address",
+            "name": "owner",
+            "indexed": true
+          },
+          {
+            "type": "address",
+            "name": "spender",
+            "indexed": true
+          },
+          {
+            "type": "uint256",
+            "name": "value",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "MessageOwnershipTransferred",
+        "inputs": [
+          {
+            "type": "address",
+            "name": "previousOwner",
+            "indexed": false
+          },
+          {
+            "type": "address",
+            "name": "newOwner",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "RecoverToken",
+        "inputs": [
+          {
+            "type": "address",
+            "name": "owner",
+            "indexed": false
+          },
+          {
+            "type": "address",
+            "name": "token",
+            "indexed": false
+          },
+          {
+            "type": "uint256",
+            "name": "amount",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "SendMessageWithFeature",
+        "inputs": [
+          {
+            "type": "uint256",
+            "name": "txId",
+            "indexed": false
+          },
+          {
+            "type": "uint256",
+            "name": "destinationChainId",
+            "indexed": false
+          },
+          {
+            "type": "uint32",
+            "name": "featureId",
+            "indexed": false
+          },
+          {
+            "type": "bytes",
+            "name": "featureData",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "SetExsig",
+        "inputs": [
+          {
+            "type": "address",
+            "name": "owner",
+            "indexed": false
+          },
+          {
+            "type": "address",
+            "name": "exsig",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "SetMaxfee",
+        "inputs": [
+          {
+            "type": "address",
+            "name": "owner",
+            "indexed": false
+          },
+          {
+            "type": "uint256",
+            "name": "maxfee",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "SetMaxgas",
+        "inputs": [
+          {
+            "type": "address",
+            "name": "owner",
+            "indexed": false
+          },
+          {
+            "type": "uint256",
+            "name": "maxGas",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "TokensBridged",
+        "inputs": [
+          {
+            "type": "address",
+            "name": "sender",
+            "indexed": true
+          },
+          {
+            "type": "uint32",
+            "name": "destChainId",
+            "indexed": true
+          },
+          {
+            "type": "address",
+            "name": "recipient",
+            "indexed": true
+          },
+          {
+            "type": "uint256",
+            "name": "amount",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "TokensReceived",
+        "inputs": [
+          {
+            "type": "uint256",
+            "name": "sourceChainId",
+            "indexed": true
+          },
+          {
+            "type": "address",
+            "name": "recipient",
+            "indexed": true
+          },
+          {
+            "type": "uint256",
+            "name": "amount",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "anonymous": false,
+        "name": "Transfer",
+        "inputs": [
+          {
+            "type": "address",
+            "name": "from",
+            "indexed": true
+          },
+          {
+            "type": "address",
+            "name": "to",
+            "indexed": true
+          },
+          {
+            "type": "uint256",
+            "name": "value",
+            "indexed": false
+          }
+        ]
+      },
+      {
+        "type": "fallback",
+        "stateMutability": "payable"
+      },
+      {
+        "type": "function",
+        "name": "CHAINS",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [
+          {
+            "type": "uint256",
+            "name": ""
+          }
+        ],
+        "outputs": [
+          {
+            "type": "address",
+            "name": "endpoint"
+          },
+          {
+            "type": "bytes",
+            "name": "endpointExtended"
+          },
+          {
+            "type": "uint16",
+            "name": "confirmations"
+          },
+          {
+            "type": "bool",
+            "name": "extended"
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "FEATURES",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [
+          {
+            "type": "uint256",
+            "name": ""
+          },
+          {
+            "type": "uint32",
+            "name": ""
+          }
+        ],
+        "outputs": [
+          {
+            "type": "address",
+            "name": "endpoint"
+          },
+          {
+            "type": "bytes",
+            "name": "endpointExtended"
+          },
+          {
+            "type": "uint16",
+            "name": "confirmations"
+          },
+          {
+            "type": "bool",
+            "name": "extended"
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "FEATURE_GATEWAY",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+          {
+            "type": "address",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "FEE_TOKEN",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+          {
+            "type": "address",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "MESSAGE_OWNER",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+          {
+            "type": "address",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "MESSAGEv3",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+          {
+            "type": "address",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "allowance",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "owner"
+          },
+          {
+            "type": "address",
+            "name": "spender"
+          }
+        ],
+        "outputs": [
+          {
+            "type": "uint256",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "approve",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "spender"
+          },
+          {
+            "type": "uint256",
+            "name": "amount"
+          }
+        ],
+        "outputs": [
+          {
+            "type": "bool",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "balanceOf",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "account"
+          }
+        ],
+        "outputs": [
+          {
+            "type": "uint256",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "bridge",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "uint32",
+            "name": "_destChainId"
+          },
+          {
+            "type": "address",
+            "name": "_recipient"
+          },
+          {
+            "type": "uint256",
+            "name": "_amount"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "burn",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "uint256",
+            "name": "amount"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "burnFrom",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "account"
+          },
+          {
+            "type": "uint256",
+            "name": "amount"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "configureClient",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "_messageV3"
+          },
+          {
+            "type": "uint256[]",
+            "name": "_chains"
+          },
+          {
+            "type": "address[]",
+            "name": "_endpoints"
+          },
+          {
+            "type": "uint16[]",
+            "name": "_confirmations"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "configureClientExtended",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "_messageV3"
+          },
+          {
+            "type": "uint256[]",
+            "name": "_chains"
+          },
+          {
+            "type": "bytes[]",
+            "name": "_endpoints"
+          },
+          {
+            "type": "uint16[]",
+            "name": "_confirmations"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "configureFeatureGateway",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "_featureGateway"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "decimals",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+          {
+            "type": "uint8",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "decreaseAllowance",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "spender"
+          },
+          {
+            "type": "uint256",
+            "name": "subtractedValue"
+          }
+        ],
+        "outputs": [
+          {
+            "type": "bool",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "increaseAllowance",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "spender"
+          },
+          {
+            "type": "uint256",
+            "name": "addedValue"
+          }
+        ],
+        "outputs": [
+          {
+            "type": "bool",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "isAuthorized",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "_sender"
+          },
+          {
+            "type": "uint256",
+            "name": "_sourceChainId"
+          }
+        ],
+        "outputs": [
+          {
+            "type": "bool",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "isSelf",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "_sender"
+          },
+          {
+            "type": "uint256",
+            "name": "_sourceChainId"
+          }
+        ],
+        "outputs": [
+          {
+            "type": "bool",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "messageProcess",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "uint256",
+            "name": "_txId"
+          },
+          {
+            "type": "uint256",
+            "name": "_sourceChainId"
+          },
+          {
+            "type": "address",
+            "name": "_sender"
+          },
+          {
+            "type": "address",
+            "name": "_reference"
+          },
+          {
+            "type": "uint256",
+            "name": "_protocolAmount"
+          },
+          {
+            "type": "bytes",
+            "name": "_data"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "name",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+          {
+            "type": "string",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "recoverToken",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "_token"
+          },
+          {
+            "type": "uint256",
+            "name": "_amount"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "setExsig",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "_signer"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "setMaxfee",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "uint256",
+            "name": "_maxFee"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "setMaxgas",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "uint256",
+            "name": "_maxGas"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "function",
+        "name": "symbol",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+          {
+            "type": "string",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "totalSupply",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+          {
+            "type": "uint256",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "transfer",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "to"
+          },
+          {
+            "type": "uint256",
+            "name": "amount"
+          }
+        ],
+        "outputs": [
+          {
+            "type": "bool",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "transferFrom",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "from"
+          },
+          {
+            "type": "address",
+            "name": "to"
+          },
+          {
+            "type": "uint256",
+            "name": "amount"
+          }
+        ],
+        "outputs": [
+          {
+            "type": "bool",
+            "name": ""
+          }
+        ]
+      },
+      {
+        "type": "function",
+        "name": "transferMessageOwnership",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+          {
+            "type": "address",
+            "name": "_newMessageOwner"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "type": "receive",
+        "stateMutability": "payable"
+      }
+    ],
+    "chainId": 84532,
+    "networkName": "base_sepolia"
+  }
+}

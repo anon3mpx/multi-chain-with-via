@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import ".deps/npm/@vialabs-io/contracts/message/MessageClient.sol";
+import "@vialabs-io/contracts/message/MessageClient.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 
-contract ViaERC20Collateral is MessageClient {
+contract ViaERC20CollateralTest is MessageClient {
     using SafeERC20 for IERC20;
     
     IERC20 public immutable wrappedToken;

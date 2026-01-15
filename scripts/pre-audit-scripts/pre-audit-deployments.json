@@ -1,0 +1,266 @@
+{
+  "HOA": {
+    "pulsechain": {
+      "address": "0xc7dA00db476E18231079Fbf61D67930314EA5b26",
+      "type": "collateral",
+      "deployedAt": "2026-01-14T10:38:36.768Z",
+      "chainId": 369
+    },
+    "base": {
+      "address": "0x421b1c25b5Cd1766Aa17d01133a548C28D00b726",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T10:40:16.993Z",
+      "chainId": 8453
+    },
+    "arbitrum": {
+      "address": "0x1F031F7A2652fD6f10F1FB37BEfaac8A69039f08",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T14:33:41.294Z",
+      "chainId": 42161
+    },
+    "optimism": {
+      "address": "0x0AD73370Ca2e1b7667B568d20f25eF0864227bFC",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T14:34:14.205Z",
+      "chainId": 10
+    },
+    "bnb": {
+      "address": "0xc1Bb27E7AE8af9164Cb6B5D3A465478415EdEbB7",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T14:35:35.958Z",
+      "chainId": 56
+    },
+    "polygon": {
+      "address": "0x6B7c81207240a38e03E5e9B138C53c4762515cCD",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T14:36:42.447Z",
+      "chainId": 137
+    },
+    "avalanche": {
+      "address": "0xc14441CBD763FBad2Db823CCa77AFAdeCbcdd0c4",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T14:37:25.123Z",
+      "chainId": 43114
+    }
+  },
+  "COCK": {
+    "pulsechain": {
+      "address": "0x12b42e964294dCF79f44E11FB4A9c23698f475d4",
+      "type": "collateral",
+      "deployedAt": "2026-01-14T16:00:00.000Z",
+      "chainId": 369
+    },
+    "base": {
+      "address": "0xE78C3473B59156416994b57bC261a51fFbEee4FA",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T16:00:07.866Z",
+      "chainId": 8453
+    },
+    "arbitrum": {
+      "address": "0x33dD4fEE8555263178a7ffD8bf7522BA2E6C33a3",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T16:00:55.274Z",
+      "chainId": 42161
+    },
+    "optimism": {
+      "address": "0xb50Dd86bB594C3d7FBA44045F4a90f8eb12B5935",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T16:01:18.310Z",
+      "chainId": 10
+    },
+    "bnb": {
+      "address": "0xce032ac88ad11E6f8374B3760F5a98a77c6584f0",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T16:01:32.919Z",
+      "chainId": 56
+    },
+    "polygon": {
+      "address": "0xd7dDc57fC9eCFd0fb9E0773Eb80276fe62B0Fc93",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T16:02:01.523Z",
+      "chainId": 137
+    },
+    "avalanche": {
+      "address": "0x46763657C2e4845C4f72c7Cce605B3cB3309fd2f",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T16:02:22.820Z",
+      "chainId": 43114
+    }
+  },
+  "PLSX": {
+    "pulsechain": {
+      "address": "0xDe524350F6421842EE39baC52d69c0Db26DD0479",
+      "type": "collateral",
+      "deployedAt": "2026-01-14T16:28:06.472Z",
+      "chainId": 369
+    },
+    "base": {
+      "address": "0xF8Ae2Ca61ccAF2e6912d142b797080a3F7439c53",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T16:28:31.968Z",
+      "chainId": 8453
+    },
+    "arbitrum": {
+      "address": "0xB04d0A850813A867f9e858A04fa11A22c58ff846",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T16:29:04.230Z",
+      "chainId": 42161
+    },
+    "optimism": {
+      "address": "0xEab30C23A015942BDc8204bD8dcA2780a5957a8c",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T16:29:30.339Z",
+      "chainId": 10
+    },
+    "bnb": {
+      "address": "0xC1d9A1f64291CF47e703eab6b27fA0660cAE7324",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T16:29:44.954Z",
+      "chainId": 56
+    },
+    "polygon": {
+      "address": "0xE18947547EB1f49B725c3Ca4f95bD45A84F6c24A",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T16:30:06.824Z",
+      "chainId": 137
+    },
+    "avalanche": {
+      "address": "0x7e39288d48ae017B1dF2f20523a6A1c7C91D96E2",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T16:30:49.277Z",
+      "chainId": 43114
+    }
+  },
+  "INC": {
+    "pulsechain": {
+      "address": "0x25f9387AA86a6853C74AD1A14D531d03F8F1619a",
+      "type": "collateral",
+      "deployedAt": "2026-01-14T18:05:23.201Z",
+      "chainId": 369
+    },
+    "base": {
+      "address": "0x02B7f5Fe7459B6482545f0b1979c61BA22F4CCA5",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T18:06:10.975Z",
+      "chainId": 8453
+    },
+    "arbitrum": {
+      "address": "0x808945fc3ab570f67011e2008E56949ee6899267",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T18:06:24.901Z",
+      "chainId": 42161
+    },
+    "optimism": {
+      "address": "0x1D135C2711f89e6eb70665BF55942E498835b336",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T18:06:46.307Z",
+      "chainId": 10
+    },
+    "bnb": {
+      "address": "0x6B7c81207240a38e03E5e9B138C53c4762515cCD",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T18:07:06.626Z",
+      "chainId": 56
+    },
+    "polygon": {
+      "address": "0x7307FEE834DdC88A716904830C0cb356A4878be1",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T18:07:25.193Z",
+      "chainId": 137
+    },
+    "avalanche": {
+      "address": "0x3E8cEA4287b7D1d707FE3FD526a19C3fE2221798",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T18:07:53.987Z",
+      "chainId": 43114
+    }
+  },
+  "WPLS": {
+    "pulsechain": {
+      "address": "0xEecBf7a332e16572AB367623E9A05d4d26d2c8C4",
+      "type": "collateral",
+      "deployedAt": "2026-01-14T18:28:50.013Z",
+      "chainId": 369
+    },
+    "base": {
+      "address": "0x78208aeC3e336c6636AB5E0bA16aB9FEA1710ca5",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T18:29:06.027Z",
+      "chainId": 8453
+    },
+    "arbitrum": {
+      "address": "0xA11F758A972e843Fde082BE31Ff1a7cd6e47ac1C",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T18:29:32.279Z",
+      "chainId": 42161
+    },
+    "optimism": {
+      "address": "0x4Ce7a88A512FB0BfbB1F6Fe9cE70F2A98D413BeC",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T18:30:16.046Z",
+      "chainId": 10
+    },
+    "bnb": {
+      "address": "0x84B0b1EE6eef971105442Eb9Ab420F3DbB774b46",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T18:30:28.489Z",
+      "chainId": 56
+    },
+    "polygon": {
+      "address": "0x1f5C42FCd0940692d4be52d17CD6bbFDFac9b0ac",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T18:30:53.690Z",
+      "chainId": 137
+    },
+    "avalanche": {
+      "address": "0x2271f95dda2b85BefadDe6BdC689C84c63150e04",
+      "type": "synthetic",
+      "deployedAt": "2026-01-14T18:31:27.073Z",
+      "chainId": 43114
+    }
+  },
+  "pHEX": {
+    "pulsechain": {
+      "address": "0xa489CeA254e8649F5b4BA1A4708ed348425606BE",
+      "type": "collateral",
+      "deployedAt": "2026-01-15T11:27:06.620Z",
+      "chainId": 369
+    },
+    "base": {
+      "address": "0xb97A43ae0563670D83f547638a5A89F2210D1a2c",
+      "type": "synthetic",
+      "deployedAt": "2026-01-15T11:28:09.075Z",
+      "chainId": 8453
+    },
+    "arbitrum": {
+      "address": "0xf4e53aAe1D9f27851B03842007D0a8a023317cD2",
+      "type": "synthetic",
+      "deployedAt": "2026-01-15T11:30:23.017Z",
+      "chainId": 42161
+    },
+    "optimism": {
+      "address": "0x74b40bAc12a493ab0D9c2daC6B1BCa7A705A6743",
+      "type": "synthetic",
+      "deployedAt": "2026-01-15T11:37:16.331Z",
+      "chainId": 10
+    },
+    "bnb": {
+      "address": "0x5f8Eea46Aaf2b936790495d25806B22c21f92242",
+      "type": "synthetic",
+      "deployedAt": "2026-01-15T11:37:47.157Z",
+      "chainId": 56
+    },
+    "polygon": {
+      "address": "0x9BD3C63e254a3fF7b757c9bad18F3c420e7825B2",
+      "type": "synthetic",
+      "deployedAt": "2026-01-15T11:38:04.509Z",
+      "chainId": 137
+    },
+    "avalanche": {
+      "address": "0x762c2206681c4059df13acb9D2eF87fFA4Ee3FEc",
+      "type": "synthetic",
+      "deployedAt": "2026-01-15T11:38:50.763Z",
+      "chainId": 43114
+    }
+  }
+}

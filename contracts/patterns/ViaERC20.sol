@@ -1,11 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import ".deps/npm/@vialabs-io/contracts/message/MessageClient.sol";
+// import "node_modules/@vialabs-io/contracts/message/MessageClient.sol";
+import "@vialabs-io/contracts/message/MessageClient.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 
-contract ViaERC20 is ERC20, ERC20Burnable, MessageClient {
+contract ViaERC20Test is ERC20, ERC20Burnable, MessageClient {
 
     // Events for tracking cross-chain transfers
     event TokensBridged(address indexed sender, uint32 indexed destChainId, address indexed recipient, uint256 amount);
